@@ -1,5 +1,7 @@
 package com.example.firstproject.controller;
 
+import com.example.firstproject.dto.ArticleForm;
+import com.example.firstproject.entity.Article;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,7 +15,14 @@ public class ArticleController {
     }
 
     @PostMapping("/articles/create")
-    public String createArticle() {
+    public String createArticle(ArticleForm form) {
+        System.out.println(form.toString());
+
+        // 1.Dto를 변환! Entity!
+        Article article = form.toEntity();
+
+        // 2.Repository에게 Entity를 DB안에 저장하게 함!
+
         return "";
     }
 }
