@@ -5,15 +5,17 @@
     <tr>
         <th scope="col">ID</th>
         <th scope= "col">Title</th>
-        <th scope="col">Content</th>
+        <th scope="col">Contents</th>
     </tr>
     </thead>
     <tbody>
+    {{#article}}
     <tr>
-        <th>1</th>
-        <td>제목1111</td>
-        <td>내용1111</td>
+        <th>{{id}}</th>
+        <td>{{title}}</td>
+        <td>{{contents}}</td>
     </tr>
+    {{/article}}
     </tbody>
 </table>
 
